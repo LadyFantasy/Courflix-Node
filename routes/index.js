@@ -11,7 +11,6 @@ router.use(function (req, res, next) {
   next();
 });
 
-
 //Movies
 const MovieController = require("../controllers/MovieController");
 const MovieService = require("../services/MovieService");
@@ -23,14 +22,11 @@ const SerieInstance = new SerieController(new SerieService());
 
 const MovieInstance = new MovieController(new MovieService(), new SerieService());
 
-
 // ROUTES
 
-
-router.get('/',function(req,res){
-  res.sendFile("../views/index.html")
+router.get("/", (req, res) => {
+  res.render("../views/index.html");
 });
-
 
 router.get("/movies", (req, res) => {
   MovieInstance.getMovies(req, res);
