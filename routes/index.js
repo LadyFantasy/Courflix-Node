@@ -24,10 +24,6 @@ const MovieInstance = new MovieController(new MovieService(), new SerieService()
 
 // ROUTES
 
-router.get("/", (req, res) => {
-  res.render("../views/index.html");
-});
-
 router.get("/movies", (req, res) => {
   MovieInstance.getMovies(req, res);
 });
