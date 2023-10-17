@@ -14,5 +14,10 @@
     "passport": "^0.4.1",
     "passport-headerapikey": "^1.2.1",
     "require": "^2.4.20"
-  }
+  },
+  “engines”: {
+“node”: “>=14 <15”
+}
+
+
 }
